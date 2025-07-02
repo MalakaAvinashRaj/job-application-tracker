@@ -3,6 +3,7 @@ import { redirect } from "next/navigation"
 import { getSession } from "@/lib/supabase-server"
 import DashboardNav from "@/components/dashboard/dashboard-nav"
 import BottomNavClientWrapper from "@/components/dashboard/BottomNavClientWrapper"
+import Footer from "@/components/footer"
 
 export default async function DashboardLayout({
   children,
@@ -21,6 +22,7 @@ export default async function DashboardLayout({
       <DashboardNav user={session.user} />
       <div className="flex-1 pt-20">{children}</div>
       <BottomNavClientWrapper />
+      <Footer />
     </div>
   )
 }

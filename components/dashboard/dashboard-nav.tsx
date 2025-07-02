@@ -82,7 +82,7 @@ export default function DashboardNav({ user }: DashboardNavProps) {
               <SheetContent side="left" className="hidden sm:block w-64 sm:max-w-sm p-0">
                 <div className="flex items-center gap-2 pb-4 border-b mb-4 px-4 pt-4">
                   <Briefcase className="h-6 w-6 text-primary" />
-                  <span className="text-xl font-bold">JobTrackr</span>
+                  <span className="text-xl font-bold">AI Job Hub</span>
                 </div>
                 <nav className="flex flex-col gap-2 px-4">
                   {navItems.map((item) => (
@@ -108,7 +108,7 @@ export default function DashboardNav({ user }: DashboardNavProps) {
             </Sheet>
             <Link href="/dashboard" className="flex items-center gap-2">
               <Briefcase className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold hidden md:inline-block">JobTrackr</span>
+              <span className="text-xl font-bold hidden md:inline-block">AI Job Hub</span>
             </Link>
           </div>
           <nav className="hidden md:flex items-center gap-4 lg:gap-6">

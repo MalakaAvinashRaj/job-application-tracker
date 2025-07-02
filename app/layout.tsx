@@ -9,9 +9,16 @@ import { SupabaseProvider } from "@/components/supabase-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "JobTrackr - AI-Powered Job Application Tracker",
-  description: "Automatically track your job applications across platforms",
-    generator: 'v0.dev'
+  title: "AI Job Hub - AI-Powered Job Application Tracker",
+  description: "AI Job Hub helps you automatically track and analyze your job applications across email, LinkedIn, and more. Secure, private, and powered by AI.",
+  openGraph: {
+    title: "AI Job Hub",
+    description: "AI Job Hub helps you automatically track and analyze your job applications across email, LinkedIn, and more. Secure, private, and powered by AI.",
+  },
+  twitter: {
+    title: "AI Job Hub",
+    description: "AI Job Hub helps you automatically track and analyze your job applications across email, LinkedIn, and more. Secure, private, and powered by AI.",
+  },
 }
 
 export default function RootLayout({
