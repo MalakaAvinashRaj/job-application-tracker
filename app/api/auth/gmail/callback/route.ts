@@ -185,20 +185,20 @@ export async function GET(request: NextRequest) {
       } else {
         // Insert new integration
         const { error } = await supabase.from("email_integrations").insert({
-          user_id: userData.user.id,
-          provider: "gmail",
-          credentials: {
-            access_token: tokenData.access_token,
-            refresh_token: tokenData.refresh_token,
-            token_type: tokenData.token_type,
-            expires_in: tokenData.expires_in,
-            id_token: tokenData.id_token,
-            email: userInfo.email,
-            issued_at: Math.floor(Date.now() / 1000),
-          },
-          is_active: true,
-          sync_frequency: "hourly",
-        })
+        user_id: userData.user.id,
+        provider: "gmail",
+        credentials: {
+          access_token: tokenData.access_token,
+          refresh_token: tokenData.refresh_token,
+          token_type: tokenData.token_type,
+          expires_in: tokenData.expires_in,
+          id_token: tokenData.id_token,
+          email: userInfo.email,
+          issued_at: Math.floor(Date.now() / 1000),
+        },
+        is_active: true,
+        sync_frequency: "hourly",
+      })
         integrationError = error
         console.log(`[OAuth Callback] Inserted new integration for user ${userData.user.id}`)
       }
